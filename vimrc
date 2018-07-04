@@ -9,6 +9,7 @@ set expandtab
 set hlsearch
 
 let g:go_version_warning = 0
+let g:ycm_server_python_interpreter='/usr/bin/python'
 
 nmap nt :NERDTree<cr>
 nmap nu :set norelativenumber<cr>
@@ -30,5 +31,6 @@ Plugin 'fatih/vim-go'
 Bundle 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
