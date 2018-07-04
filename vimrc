@@ -10,6 +10,11 @@ set hlsearch
 
 let g:go_version_warning = 0
 let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 nmap nt :NERDTree<cr>
 nmap nu :set norelativenumber<cr>
@@ -21,9 +26,11 @@ filetype off                  " required
 autocmd VimEnter * NERDTree
 wincmd w
 autocmd VimEnter * wincmd w   " auto put cursor to the right area
-autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif  " 当退出的是最后一个窗>口时关闭所有vim窗口
+autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif  " 当退出的是最后一个窗口时关闭所有vim窗口
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " set the runtime path to include Vundle and initialize
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Bundle 'kien/ctrlp.vim'
