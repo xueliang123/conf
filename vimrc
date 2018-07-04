@@ -27,10 +27,9 @@ autocmd VimEnter * NERDTree
 wincmd w
 autocmd VimEnter * wincmd w   " auto put cursor to the right area
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif  " 当退出的是最后一个窗口时关闭所有vim窗口
-autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
+
 
 " set the runtime path to include Vundle and initialize
-set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Bundle 'kien/ctrlp.vim'
