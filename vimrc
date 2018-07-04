@@ -12,6 +12,7 @@ let g:go_version_warning = 0
 
 nmap nt :NERDTree<cr>
 nmap nu :set norelativenumber<cr>
+nmap nh :nohl<cr>
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
