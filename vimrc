@@ -26,7 +26,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
 let NERDTreeIgnore = ['\.pyc$']
-let g:airline_theme="bubblegum"
+let g:airline_theme = "bubblegum"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 if !exists('g:airline_symbols')
