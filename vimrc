@@ -13,6 +13,14 @@ set hlsearch
 set completeopt=menu,menuone
 set updatetime=100
 set hidden
+" 设置默认进行大小写不敏感查找
+set ignorecase
+" 如果有一个大写字母，则切换到大小写敏感查找
+set smartcase
+
+set tags+=/data08/home/xueliang.leon/PyProject/thecat/tags " python代码自动跳转
+set autochdir                                              " python代码自动跳转
+
 
 let mapleader = "\<Space>"
 
@@ -25,7 +33,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:nerdtree_tabs_open_on_console_startup = 1
-let NERDTreeIgnore = ['\.pyc$']
+let NERDTreeShowHidden = 1
+let NERDTreeIgnore = ['\.pyc$', '\.swp$']
 let g:airline_theme = "bubblegum"
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
@@ -33,6 +42,7 @@ if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
+let g:indentLine_setColors = 0
 
 nmap <leader>nt :NERDTree<CR>
 nmap <leader>nu :set norelativenumber<CR>
@@ -43,7 +53,7 @@ nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>bl :ls<CR>
 nmap <Leader><Leader> V
-nmap <Leader>v <C-v>
+nmap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
 set nocompatible              " be iMproved, required
@@ -70,5 +80,6 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
