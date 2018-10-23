@@ -1,6 +1,7 @@
 syntax on
 colorscheme molokai
 
+set encoding=utf-8
 set relativenumber                     " 设置相对行号
 set number                             " 设置当前行号
 set shiftwidth=4
@@ -53,7 +54,8 @@ nmap <leader>l :bnext<CR>
 nmap <leader>h :bprevious<CR>
 nmap <leader>bl :ls<CR>
 nmap <Leader><Leader> V
-nmap <leader>q :q<CR>
+nmap <Leader>a :Gblame<CR>
+nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
 set nocompatible              " be iMproved, required
