@@ -1,5 +1,4 @@
 syntax on
-colorscheme molokai
 
 set encoding=utf-8
 set relativenumber                     " 设置相对行号
@@ -18,10 +17,6 @@ set hidden
 set ignorecase
 " 如果有一个大写字母，则切换到大小写敏感查找
 set smartcase
-
-set tags+=/data08/home/xueliang.leon/PyProject/thecat/tags " python代码自动跳转
-set autochdir                                              " python代码自动跳转
-
 
 let mapleader = "\<Space>"
 
@@ -55,6 +50,7 @@ nmap <leader>h :bprevious<CR>
 nmap <leader>bl :ls<CR>
 nmap <Leader><Leader> V
 nmap <Leader>a :Gblame<CR>
+nmap <Leader>f :NERDTreeFind<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
@@ -79,9 +75,13 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'trevordmiller/nova-vim'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
+" colorscheme molokai
+colorscheme nova
