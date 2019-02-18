@@ -1,15 +1,15 @@
 syntax on
 
-set encoding=utf-8
+set encoding=utf-8                     " 编码协议
 set relativenumber                     " 设置相对行号
 set number                             " 设置当前行号
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set cursorline
-set cursorcolumn
+set cursorline                         " 横排光标高亮
+set cursorcolumn                       " 竖排光标高亮
 set expandtab
-set hlsearch
+set hlsearch                           " 高亮搜索结果
 set completeopt=menu,menuone
 set updatetime=100
 set hidden
