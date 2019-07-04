@@ -87,5 +87,4 @@ Plugin 'mileszs/ack.vim'
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
-"colorscheme molokai
 colorscheme nova
