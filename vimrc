@@ -1,15 +1,15 @@
 syntax on
 
-set encoding=utf-8                     " 编码协议
+set encoding=utf-8
 set relativenumber                     " 设置相对行号
 set number                             " 设置当前行号
 set shiftwidth=4
 set softtabstop=4
 set tabstop=4
-set cursorline                         " 横排光标高亮
-set cursorcolumn                       " 竖排光标高亮
+set cursorline
+set cursorcolumn
 set expandtab
-set hlsearch                           " 高亮搜索结果
+set hlsearch
 set completeopt=menu,menuone
 set updatetime=100
 set hidden
@@ -17,6 +17,8 @@ set hidden
 set ignorecase
 " 如果有一个大写字母，则切换到大小写敏感查找
 set smartcase
+" 设置vim shell的路径
+set shell=/usr/bin/zsh
 
 let mapleader = "\<Space>"
 
@@ -51,6 +53,7 @@ nmap <leader>bl :ls<CR>
 nmap <Leader><Leader> V
 nmap <Leader>a :Gblame<CR>
 nmap <Leader>f :NERDTreeFind<CR>
+nmap <Leader>s :sh<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
@@ -80,8 +83,9 @@ Plugin 'trevordmiller/nova-vim'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-fugitive'
+Plugin 'mileszs/ack.vim'
 Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
-" colorscheme molokai
+"colorscheme molokai
 colorscheme nova
