@@ -19,6 +19,7 @@ set ignorecase
 set smartcase
 " 设置vim shell的路径
 set shell=/usr/bin/zsh
+set rtp+=$GOPATH/src/golang.org/x/lint/misc/vim
 
 let mapleader = "\<Space>"
 
@@ -68,6 +69,7 @@ autocmd VimEnter * wincmd w   " auto put cursor to the right area
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif  " 当退出的是最后一个窗口时关闭所有vim窗口
+autocmd BufWritePost,FileWritePost *.go execute 'Lint' | cwindow
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
