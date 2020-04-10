@@ -24,7 +24,7 @@ let mapleader = "\<Space>"
 
 let g:ycm_add_preview_to_completeopt = 0
 let g:go_version_warning = 0
-let g:ycm_server_python_interpreter='/usr/bin/python'
+let g:ycm_server_python_interpreter='/usr/bin/python3'
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -77,6 +77,7 @@ Plugin 'fatih/vim-go'
 Bundle 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'majutsushi/tagbar'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'sheerun/vim-polyglot'
