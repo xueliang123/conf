@@ -55,6 +55,7 @@ nmap <Leader><Leader> V
 nmap <Leader>a :Gblame<CR>
 nmap <Leader>f :NERDTreeFind<CR>
 nmap <Leader>s :sh<CR>
+nmap <Leader>r :TagbarToggle<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
 
